@@ -1,0 +1,24 @@
+# ---- Python 缓存 ----
+__pycache__/
+*.pyc
+*.pyo
+
+# ---- 爬来的原始图片 + 清洗后的数据集（约 711MB，脚本可重跑生成）----
+/dataset/
+
+# ---- 预训练权重（yolo11x.pt 单个 114MB，超 GitHub 100MB 文件上限）----
+# 用 03_自动标注.py 顶部注释里的镜像地址自行下载
+/weights/
+
+# ---- 训练过程的中间产物（每轮都变的 batch 可视化 + 冗余权重）----
+last.pt
+runs/**/train_batch*.jpg
+runs/**/val_batch*.jpg
+runs/detect/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+~$*
